@@ -1,15 +1,30 @@
-import { useState } from 'react'
-import logo from './logo.svg'
 import './App.css'
+import BtnGroup from './btnGroup'
+import OutlineGroup from './outlineGroup'
+import TextGroup from './textGroup'
+import DisableShadowGroup from './disableShadow'
+import DisabledGroup from './disabledGroup'
+import IconGroup from './iconGroup'
+import SizeGroup from './sizeGroup'
+import ColorGroup from './colorGroup'
+import Main from './mainComponent'
+import Aside from './asideComponent'
 
 function App() {
-  const [count, setCount] = useState(0)
 
   return (
     <div className="App">
-     <p>
-       Hello, from App.jsx;
-     </p>
+      <Main>
+        <BtnGroup />
+        <OutlineGroup />
+        <TextGroup />
+        <DisableShadowGroup />
+        <DisabledGroup />
+        <IconGroup />
+        <SizeGroup />
+        <ColorGroup />
+      </Main>
+      <Aside />
     </div>
   )
 }
