@@ -1,4 +1,3 @@
-import './App.css'
 import BtnGroup from './btnGroup'
 import OutlineGroup from './outlineGroup'
 import TextGroup from './textGroup'
@@ -12,19 +11,35 @@ import Aside from './asideComponent'
 
 function App() {
 
+  const MenuToggle = (e) => {
+    const aside = document.querySelector('.aside');
+    aside.classList.toggle('slide');
+    aside.firstElementChild.classList.toggle('aside-main')
+  }
+
   return (
-    <div className="App">
-      <Main>
-        <BtnGroup />
-        <OutlineGroup />
-        <TextGroup />
-        <DisableShadowGroup />
-        <DisabledGroup />
-        <IconGroup />
-        <SizeGroup />
-        <ColorGroup />
-      </Main>
-      <Aside />
+    <div className="container">
+      <nav className='nav'>
+        <button 
+          onClick={MenuToggle}
+          className="menu-icon">
+          menu
+        </button>
+      </nav>
+
+      <div className="App">
+        <Main>
+          <BtnGroup />
+          <OutlineGroup />
+          <TextGroup />
+          <DisableShadowGroup />
+          <DisabledGroup />
+          <IconGroup />
+          <SizeGroup />
+          <ColorGroup />
+        </Main>
+        <Aside />
+      </div>
     </div>
   )
 }

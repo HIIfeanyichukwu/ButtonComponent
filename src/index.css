@@ -1,6 +1,53 @@
 @import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@700&family=Noto+Sans+JP:wght@500&family=Poppins:wght@500;600&family=Ubuntu+Mono&display=swap');
 
+.App {
+  display: flex;
+  height: 100vh;
+  overflow: hidden;
+  width: 100%;
+}
 
+.aside {
+  order: 1;
+  position: absolute;
+  bottom: 0;
+  top: 0;
+  width: 237px;
+  height: 100vh;
+  padding-inline-start: 56.5px;
+  transform: translateX(-237px);
+  transition: transform 1s;
+}
+
+.main {
+  order: 2;
+  overflow-y: scroll;
+  width: 100%;
+  padding-inline: 1rem;
+}
+
+.container {
+  overflow: hidden;
+}
+.nav {
+  margin-block-start: 1rem;
+  width: 100%;
+  display: flex;
+  align-items: center;
+  padding-inline-end: .5rem;
+}
+.nav .menu-icon {
+  margin-left: auto;
+  background-image: url(./img/menu.svg);
+  background-repeat: no-repeat;
+  width: 2rem;
+  height: 2rem;
+  background-size: contain;
+  background-color: transparent;
+  border: none;
+  text-indent: 500%;
+  white-space: nowrap;
+}
 
 
 .icon {
@@ -20,3 +67,96 @@
 .group + .group {
   margin-block-start: 45px;
 }
+
+a {
+  color: inherit;
+}
+.group, .color-sub {
+  display: flex;
+  position: relative;
+}
+.color-sub + .color-sub {
+  align-items: flex-end;
+}
+
+.btn-card + .btn-card {
+  margin-inline-start: 80px;
+}
+
+.color-sub .btn-card {
+  width: 185px;
+}
+
+.color-group {
+  display: flex;
+  flex-direction: column;
+}
+
+.btn-group > .btn-card + .btn-card {
+  position: absolute;
+  left: 155px;
+}
+.outline > .btn-card + .btn-card {
+  position: absolute;
+  left: 155px;
+}
+.text > .btn-card + .btn-card {
+  left: 155px;
+  position: absolute;
+}
+
+.disabled > .btn-card + .btn-card {
+  left: 155px;
+  position: absolute;
+}
+
+.material-icon {
+  margin-block: 52px 34px;
+  font-family: "Ubuntu Mono", sans-serif;
+  font-weight: 400;
+  font-size: 12px;
+  line-height: 12px;
+  color: #828282;
+}
+.acknowledgement {
+  margin-block-end: 24px;
+  font-weight: 700;
+  font-family: "Montserrat", sans-serif;
+  font-size: 14px;
+  line-height: 17.07px;
+  color: #a9a9a9;
+}
+
+.slide {
+  transform: translateX(0px);
+  transition: transform 1s;
+  overflow-y: scroll;
+  padding-block-end: 5rem;
+}
+.aside-main {
+  margin-block-end: 3rem;
+}
+
+
+@media(min-width: 1024px) {
+
+  
+  .nav {
+    display: none;
+  }
+  .aside {
+    margin-inline-end: 90.5px;
+    transform: translateX(0px);
+    position: relative;
+    overflow: hidden;
+  }
+  .main {
+    width: calc(100% - 237px);
+    padding-inline: 0rem;
+  }
+  
+
+  
+}
+
+
